@@ -1,0 +1,158 @@
+node-tmp (0.2.1+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Modernize debian/watch
+  * Fix GitHub tags regex
+  * Declare compliance with policy 4.6.0
+
+ -- Yadd <yadd@debian.org>  Wed, 15 Sep 2021 10:52:08 +0200
+
+node-tmp (0.2.1+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 0.2.1+dfsg
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 14 Oct 2020 19:38:03 +0200
+
+node-tmp (0.2.0+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Ross Gammon ]
+  * Remove myself from Uploaders
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Use dh-sequence-nodejs
+  * New upstream version 0.2.0+dfsg
+  * Refresh patches
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 14 Oct 2020 09:01:56 +0200
+
+node-tmp (0.1.0+dfsg-6) unstable; urgency=medium
+
+  * Team upload
+  * Disable one test that fail on debci machines (Closes: #951168)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 12 Feb 2020 06:27:09 +0100
+
+node-tmp (0.1.0+dfsg-5) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.5.0
+  * Increase timeout (may fix debci)
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 05 Feb 2020 07:24:06 +0100
+
+node-tmp (0.1.0+dfsg-4) unstable; urgency=medium
+
+  * Team upload
+  * Import upstream fix for Node.js ≥ 12 and enable all tests
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 24 Jan 2020 06:37:02 +0100
+
+node-tmp (0.1.0+dfsg-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove obsolete field Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+
+  [ Xavier Guimard ]
+  * Disable 2 tests failng with Node.js ≥ 12
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 20 Jan 2020 13:11:23 +0100
+
+node-tmp (0.1.0+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Disable one test that fails with arm64 (SIGTERM)
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 09 Dec 2019 07:03:25 +0100
+
+node-tmp (0.1.0+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.1
+  * Add "Rules-Requires-Root: no"
+  * New upstream version 0.1.0+dfsg
+  * Update test (use mocha)
+  * Update dependencies: replace node-os-tmpdir by node-rimraf
+
+ -- Xavier Guimard <yadd@debian.org>  Tue, 03 Dec 2019 06:32:43 +0100
+
+node-tmp (0.0.33+dfsg-2) unstable; urgency=medium
+
+  * Reupload to unstable
+  * Bump Standards-Version to 4.4.0 and debhelper to 12
+  * Switch install to pkg-js-tools
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Sun, 11 Aug 2019 20:31:55 +0530
+
+node-tmp (0.0.33+dfsg-1) experimental; urgency=medium
+
+  * Exclude docs/ from import: it contains embedded JS and does not provide
+    more info than README.md
+  * New upstream version 0.0.33+dfsg
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Add myself as an uploader
+  * Update d/control
+  * Update d/copyright
+  * Switch test to pkg-js-tools
+
+ -- Utkarsh Gupta <guptautkarsh2102@gmail.com>  Tue, 05 Mar 2019 20:04:52 +0530
+
+node-tmp (0.0.31-1) unstable; urgency=medium
+
+  * Move node-tmp from experimental to unstable, Stretch freeze is over
+  * Bump standards version, used https form of copyright format URL
+  * Switch Section hint to javascript from web to avoid override
+
+ -- Ross Gammon <rosco2@ubuntu.com>  Wed, 12 Jul 2017 19:58:33 +0200
+
+node-tmp (0.0.31-1~exp1) experimental; urgency=medium
+
+  * New upstream release
+  * Use ubuntu email address
+  * Bump standards version, no changes required
+  * Use secure git Vcs URI
+
+ -- Ross Gammon <rosco2@ubuntu.com>  Mon, 17 Apr 2017 23:13:30 +0200
+
+node-tmp (0.0.28-1) unstable; urgency=medium
+
+  * New upstream release
+  * Switch priority to optional from extra
+  * Use https for Vcs browser URL
+
+ -- Ross Gammon <rossgammon@mail.dk>  Sat, 17 Oct 2015 16:33:57 +0200
+
+node-tmp (0.0.27-1) unstable; urgency=medium
+
+  [ Bas Couwenberg ]
+  * New upstream release.
+  * Add dependency on node-os-tmpdir.
+
+  [ Ross Gammon ]
+  * New upstream release (Closes: #796157)
+  * Sign tags in gbp.conf by default
+  * Add myself to copyright file
+  * Add myself to uploaders (Closes: #792866)
+
+ -- Ross Gammon <rossgammon@mail.dk>  Thu, 27 Aug 2015 17:38:30 +0200
+
+node-tmp (0.0.25-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update copyright years in copyright file.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Tue, 10 Mar 2015 19:47:11 +0100
+
+node-tmp (0.0.24-1) unstable; urgency=low
+
+  * Initial release (Closes: #779454)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 28 Feb 2015 21:18:17 +0100

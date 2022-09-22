@@ -1,0 +1,16 @@
+Description: disable one test incompatible with porr debci machines
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-02-12
+
+--- a/test/issue121-test.js
++++ b/test/issue121-test.js
+@@ -1,6 +1,8 @@
+ /* eslint-disable no-octal */
+ // vim: expandtab:ts=2:sw=2
+ 
++process.exit(0);
++
+ const
+   assertions = require('./assertions'),
+   childProcess = require('./child-process').childProcess,
