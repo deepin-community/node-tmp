@@ -2,6 +2,7 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: tmp
 Upstream-Contact: KARASZI István <github@spam.raszi.hu>
 Source: https://github.com/raszi/node-tmp
+ https://registry.npmjs.org/@types/tmp
 Files-Excluded: docs
 
 Files: *
@@ -11,6 +12,10 @@ License: Expat
 Files: debian/*
 Copyright: 2015, Bas Couwenberg <sebastic@debian.org>
            2015, Ross Gammon <rossgammons@mail.dk>
+License: Expat
+
+Files: types-*/*
+Copyright: Microsoft Corporation
 License: Expat
 
 License: Expat

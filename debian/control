@@ -3,21 +3,22 @@ Section: javascript
 Priority: optional
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Uploaders: Utkarsh Gupta <guptautkarsh2102@gmail.com>
-Testsuite: autopkgtest-pkg-nodejs
-Build-Depends: debhelper-compat (= 13),
-               mocha <!nocheck>,
-               node-rimraf <!nocheck>,
-               dh-sequence-nodejs
-Standards-Version: 4.6.0
-Homepage: https://github.com/raszi/node-tmp
-Vcs-Git: https://salsa.debian.org/js-team/node-tmp.git
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , mocha <!nocheck>
+ , node-rimraf <!nocheck>
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-tmp
+Vcs-Git: https://salsa.debian.org/js-team/node-tmp.git
+Homepage: https://github.com/raszi/node-tmp
+Testsuite: autopkgtest-pkg-nodejs
 Rules-Requires-Root: no
 
 Package: node-tmp
 Architecture: all
-Depends: ${misc:Depends},
-         node-rimraf
+Depends: ${misc:Depends}
+ , node-rimraf
+Provides: ${nodejs:Provides}
 Description: Temporary file and directory creator for Node.js
  The main difference between node-temp and node-tmp is that node-tmp more
  aggressively checks for the existence of the newly created temporary file
