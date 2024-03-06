@@ -1,3 +1,20 @@
+node-tmp (0.2.2+dfsg+~0.2.3-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * New upstream version 0.2.2+dfsg+~0.2.3
+
+ -- Yadd <yadd@debian.org>  Mon, 29 Aug 2022 10:39:34 +0200
+
+node-tmp (0.2.1+dfsg+~0.2.2-1) unstable; urgency=medium
+
+  * Team upload
+  * Fix filenamemangle
+  * Embed typescript declarations and repack
+  * New upstream version 0.2.1+dfsg+~0.2.2
+
+ -- Yadd <yadd@debian.org>  Wed, 08 Dec 2021 17:52:16 +0100
+
 node-tmp (0.2.1+dfsg-2) unstable; urgency=medium
 
   * Team upload
