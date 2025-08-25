@@ -1,0 +1,46 @@
+From 2bb58dee4e6dfc40046497b9f72da0598b64169b Mon Sep 17 00:00:00 2001
+From: fflorent <florent.git@zeteo.me>
+Date: Thu, 7 Aug 2025 19:53:53 +0200
+Subject: Fix use of tmp.dir() with `dir` option
+
+---
+ lib/tmp.js              | 2 +-
+ test/inband-standard.js | 2 ++
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/lib/tmp.js b/lib/tmp.js
+index 8b2ed3f..bd57182 100644
+--- a/lib/tmp.js
++++ b/lib/tmp.js
+@@ -447,7 +447,7 @@ function _resolvePath(name, tmpDir, cb) {
+         cb(null, path.join(parentDir, path.basename(pathToResolve)));
+       });
+     } else {
+-      fs.realpath(path, cb);
++      fs.realpath(pathToResolve, cb);
+     }
+   });
+ }
+diff --git a/test/inband-standard.js b/test/inband-standard.js
+index 05eb8b3..28e030f 100644
+--- a/test/inband-standard.js
++++ b/test/inband-standard.js
+@@ -3,6 +3,7 @@
+ 
+ var
+   fs = require('fs'),
++  os = require('os'),
+   path = require('path'),
+   assertions = require('./assertions'),
+   rimraf = require('rimraf'),
+@@ -19,6 +20,7 @@ module.exports = function inbandStandard(isFile, beforeHook, sync = false) {
+   describe('with mode', inbandStandardTests(null, { mode: 0o755 }, isFile, beforeHook, sync));
+   describe('with multiple options', inbandStandardTests(null, { prefix: 'tmp-multiple', postfix: 'bar', mode: 0o750 }, isFile, beforeHook, sync));
+   describe('with tmpdir option', inbandStandardTests(null, { tmpdir: path.join(tmp.tmpdir, 'tmp-external'), mode: 0o750 }, isFile, beforeHook, sync));
++  describe('with dir option', inbandStandardTests(null, { dir: os.tmpdir(), mode: 0o750 }, isFile, beforeHook, sync));
+   if (isFile) {
+     describe('with discardDescriptor', inbandStandardTests(null, { mode: testMode, discardDescriptor: true }, isFile, beforeHook, sync));
+     describe('with detachDescriptor', inbandStandardTests(null, { mode: testMode, detachDescriptor: true }, isFile, beforeHook, sync));
+-- 
+2.30.2
+
