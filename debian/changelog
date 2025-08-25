@@ -1,3 +1,10 @@
+node-tmp (0.2.2+dfsg+~0.2.3-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * CVE-2025-54798: Arbitrary file write (Closes: #1110532)
+
+ -- Adrian Bunk <bunk@debian.org>  Sun, 10 Aug 2025 22:14:13 +0300
+
 node-tmp (0.2.2+dfsg+~0.2.3-1) unstable; urgency=medium
 
   * Team upload
